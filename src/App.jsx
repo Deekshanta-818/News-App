@@ -8,7 +8,7 @@ const App = () => {
    
 
 const getNews = async () => {
-    const response = await fetch(`http://newsapi.org/v2/top-headlines?country=us&apiKey=7271e80c537c43f18621ebc193be7ca5`)
+    const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=7271e80c537c43f18621ebc193be7ca5`)
     const data= await response.json();
     setNews(data.articles)
     console.log(news)
