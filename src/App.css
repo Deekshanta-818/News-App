@@ -1,19 +1,19 @@
 * {
-margin:0;
-padding:0;
-box-sizing: border-box;
-
-}
-
-.News {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-
-.heading {
-  font-family: 'Rye', cursive;
-  color:black;
-  
-  text-shadow: -2px 0 blue, 0 2px blue, 2px 0 blue, 0 -2px blue;
-}
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+    }
+    
+    .News {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+    
+    .heading {
+      font-family: 'Rye', cursive;
+      color:black;
+      
+      text-shadow: -2px 0 blue, 0 2px blue, 2px 0 blue, 0 -2px blue;
+    }
