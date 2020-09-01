@@ -9,11 +9,11 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        'https://newsapi.org/v2/top-headlines?country=us&apiKey=7271e80c537c43f18621ebc193be7ca5',
+        'https://api.currentsapi.services/v1/latest-news?apiKey=Mco_kOtGw8n3i4TDXSVRQ_dai9-gZ1KdAvxIBZCJ6H0GOz6G',
       );
  
-      setNews(result.data.articles);
-      console.log(result.data.articles)
+      setNews(result.data.news);
+      console.log(result.data.news)
     };
  
     fetchData();
@@ -32,14 +32,14 @@ function App() {
     <div className='News'>
     {news.map(info => (
                    <News
-                   key={info.title} 
+                   key={info.id} 
                    author={info.author}
                    title={info.title}
                    description={info.description}
-                   content={info.content}
-                   urlToImage={info.urlToImage}
+                   category={info.category}
+                   urlToImage={info.image}
                    url={info.url}
-                   publishedAt={info.publishedAt}
+                   publishedAt={info.published}
                    />
     ))}
     </div>
