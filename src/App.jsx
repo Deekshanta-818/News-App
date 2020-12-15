@@ -11,6 +11,7 @@ function App() {
       const result = await axios(
         'https://api.currentsapi.services/v1/latest-news?apiKey=Mco_kOtGw8n3i4TDXSVRQ_dai9-gZ1KdAvxIBZCJ6H0GOz6G',
       );
+      
  
       setNews(result.data.news);
       console.log(result.data.news)
@@ -30,7 +31,11 @@ function App() {
     </section>
 
     <div className='News'>
-    {news.map(info => (
+    {
+    
+    
+    news.map(info => (
+      info.image !=='None' ?
                    <News
                    key={info.id} 
                    author={info.author}
@@ -41,6 +46,8 @@ function App() {
                    url={info.url}
                    publishedAt={info.published}
                    />
+                   :
+                   null
     ))}
     </div>
 </div>
